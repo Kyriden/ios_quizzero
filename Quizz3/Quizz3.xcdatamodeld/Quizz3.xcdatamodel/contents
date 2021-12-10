@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CategorieQuestion" representedClassName="CategorieQuestion" syncable="YES">
+        <attribute name="categorie" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Question" representedClassName="Question" syncable="YES">
+        <attribute name="categorie" optional="YES" attributeType="String"/>
+        <attribute name="idQuestion" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="reponseA" optional="YES" attributeType="String"/>
+        <attribute name="reponseB" optional="YES" attributeType="String"/>
+        <attribute name="reponseC" optional="YES" attributeType="String"/>
+        <attribute name="reponseD" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Reponse" representedClassName="Reponse" syncable="YES">
+        <attribute name="idReponse" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="reponseQuestion" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Score" representedClassName="Score" syncable="YES">
+        <attribute name="dateScore" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="idScore" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="scoreUtilisateur" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="userMonScore" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Utilisateur"/>
+    </entity>
+    <entity name="Utilisateur" representedClassName="Utilisateur" syncable="YES">
+        <attribute name="dateInscription" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="login" attributeType="String"/>
+        <attribute name="password" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="CategorieQuestion" positionX="-137.365478515625" positionY="67.50341796875" width="128" height="44"/>
+        <element name="Question" positionX="-180.1915283203125" positionY="-435.5156402587891" width="128" height="119"/>
+        <element name="Reponse" positionX="145.1676025390625" positionY="-128.3671264648438" width="128" height="59"/>
+        <element name="Score" positionX="-297.8070068359375" positionY="-110.8143310546875" width="128" height="89"/>
+        <element name="Utilisateur" positionX="-601.3853149414062" positionY="-224.2355041503906" width="128" height="74"/>
+    </elements>
+</model>

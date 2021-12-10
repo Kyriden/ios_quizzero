@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Construit Une Question-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ConstruitUneQuestion" id="Y6W-OH-hqX" customClass="ConstruitUneQuestion" customModule="Quizz3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dWw-gW-Nqu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_blanc" translatesAutoresizingMaskIntoConstraints="NO" id="cge-Fy-Eti">
+                                <rect key="frame" x="65" y="81" width="285" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="285" id="jpO-Kz-tYr"/>
+                                    <constraint firstAttribute="height" constant="60" id="kLG-fP-tM1"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tln-wz-u4n">
+                                <rect key="frame" x="42" y="425" width="336" height="75"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="p44-1q-ME9"/>
+                                    <constraint firstAttribute="width" constant="336" id="ziv-yP-9yk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                <state key="normal" title="Réponse A Réponse A Réponse A Réponse A Réponse A Réponse A">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="verifieReponse:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xHM-Ra-0oz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mky-Or-uqM">
+                                <rect key="frame" x="42" y="528" width="336" height="75"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Vjf-Je-Eys"/>
+                                    <constraint firstAttribute="width" constant="336" id="nWD-NX-BJn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                <state key="normal" title="Réponse B">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="verifieReponse:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eUM-H9-ibw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2q-Wd-csu">
+                                <rect key="frame" x="42" y="631" width="336" height="75"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="336" id="ISq-ng-56j"/>
+                                    <constraint firstAttribute="height" constant="75" id="PEs-nh-w9A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                <state key="normal" title="Réponse C">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="verifieReponse:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="thq-Nq-zKC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2EJ-gk-Hyr">
+                                <rect key="frame" x="25" y="872" width="366" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="366" id="wJk-as-Wa5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="11"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOk-D9-bCw">
+                                <rect key="frame" x="42" y="732" width="336" height="75"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="LWv-YP-I0y"/>
+                                    <constraint firstAttribute="width" constant="336" id="WSu-vh-1He"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                <state key="normal" title="Réponse D">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="verifieReponse:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qIX-wE-2Mt"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49Y-DO-fUU">
+                                <rect key="frame" x="42" y="178" width="336" height="208"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Afficher la question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zU4-9e-D3q">
+                                        <rect key="frame" x="10" y="38" width="317" height="134"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="134" id="Ilv-r8-RhR"/>
+                                            <constraint firstAttribute="width" constant="317" id="Jd9-Na-3kc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="? / 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcI-Cw-gmm">
+                                        <rect key="frame" x="302" y="187" width="25" height="13"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="qsf-Yk-BeN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="zU4-9e-D3q" firstAttribute="top" secondItem="49Y-DO-fUU" secondAttribute="top" constant="38" id="ElB-o2-PkO"/>
+                                    <constraint firstAttribute="height" constant="208" id="Gea-Jv-ir5"/>
+                                    <constraint firstAttribute="width" constant="336" id="TWf-bt-3Th"/>
+                                    <constraint firstAttribute="trailing" secondItem="zU4-9e-D3q" secondAttribute="trailing" constant="9" id="Ux3-EJ-wlq"/>
+                                    <constraint firstAttribute="bottom" secondItem="hcI-Cw-gmm" secondAttribute="bottom" constant="8" id="pSy-2c-QKU"/>
+                                    <constraint firstAttribute="trailing" secondItem="hcI-Cw-gmm" secondAttribute="trailing" constant="9" id="tpn-pG-7vi"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2EJ-gk-Hyr" secondAttribute="trailing" constant="23" id="2zR-w6-DCt"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cge-Fy-Eti" secondAttribute="trailing" constant="64" id="5wP-Rk-dv5"/>
+                            <constraint firstItem="49Y-DO-fUU" firstAttribute="top" secondItem="cge-Fy-Eti" secondAttribute="bottom" constant="37" id="EYq-qH-4aF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TOk-D9-bCw" secondAttribute="trailing" constant="36" id="HSl-NN-cDK"/>
+                            <constraint firstItem="b2q-Wd-csu" firstAttribute="top" secondItem="mky-Or-uqM" secondAttribute="bottom" constant="28" id="KJJ-yZ-yCY"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tln-wz-u4n" secondAttribute="trailing" constant="36" id="NQi-bA-5n1"/>
+                            <constraint firstItem="tln-wz-u4n" firstAttribute="top" secondItem="49Y-DO-fUU" secondAttribute="bottom" constant="39" id="S74-ci-4dV"/>
+                            <constraint firstAttribute="bottom" secondItem="2EJ-gk-Hyr" secondAttribute="bottom" constant="24" id="i8a-Sb-6jV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="b2q-Wd-csu" secondAttribute="trailing" constant="36" id="kv2-WV-QYf"/>
+                            <constraint firstItem="cge-Fy-Eti" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="37" id="nzI-iR-ZT8"/>
+                            <constraint firstItem="TOk-D9-bCw" firstAttribute="top" secondItem="b2q-Wd-csu" secondAttribute="bottom" constant="26" id="pcu-3g-SUR"/>
+                            <constraint firstItem="mky-Or-uqM" firstAttribute="top" secondItem="tln-wz-u4n" secondAttribute="bottom" constant="28" id="rFY-kA-9GG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="49Y-DO-fUU" secondAttribute="trailing" constant="36" id="u0I-gk-kdn"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mky-Or-uqM" secondAttribute="trailing" constant="36" id="uhP-l4-Lsa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="afficheNumeroQuestion" destination="hcI-Cw-gmm" id="7go-8U-6uc"/>
+                        <outlet property="alertLabel" destination="2EJ-gk-Hyr" id="am4-Cg-Lvn"/>
+                        <outlet property="backgroundGradientView" destination="dWw-gW-Nqu" id="9TU-ud-dXP"/>
+                        <outlet property="questionLabel" destination="zU4-9e-D3q" id="NN2-iw-P4i"/>
+                        <outlet property="reponseA" destination="tln-wz-u4n" id="Ltw-pg-Yco"/>
+                        <outlet property="reponseB" destination="mky-Or-uqM" id="2yO-j5-nkd"/>
+                        <outlet property="reponseC" destination="b2q-Wd-csu" id="Gzb-ba-TTX"/>
+                        <outlet property="reponseD" destination="TOk-D9-bCw" id="8vQ-GQ-OKy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-155.07246376811597" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo_blanc" width="1087" height="251"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
