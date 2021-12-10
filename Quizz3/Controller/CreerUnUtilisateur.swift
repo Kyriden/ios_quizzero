@@ -40,6 +40,8 @@ class CreerUnUtilisateur: UIViewController {
         backgroundGradientView.layer.addSublayer(gradientLayer)
         //
         
+        self.hideKeyboardWhenTappedAround()
+        
     }
     
     //Gradient background
@@ -54,6 +56,7 @@ class CreerUnUtilisateur: UIViewController {
         let verifPassword=mdpVerif.text
         if(passwordUser != verifPassword){
             let alert = UIAlertController(title : "erreur mdp", message : "Les deux mots de passe ne correspondent pas. Merci de les resaisir", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default))
             present(alert, animated: true)
         }else{
             //creation de l'utilisateur en BDD
@@ -92,9 +95,30 @@ class CreerUnUtilisateur: UIViewController {
         self.navigationController?.pushViewController(categoryVC, animated: true)
     }
           
-        
+
     
+}
+
+extension UIViewController {
+
+    func hideKeyboardWhenTappedAround() {
+
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+
+        tap.cancelsTouchesInView = false
+
+        view.addGestureRecognizer(tap)
+
+    }
+
     
+
+    @objc func dismissKeyboard() {
+
+        view.endEditing(true)
+
+    }
+
 }
 
 
